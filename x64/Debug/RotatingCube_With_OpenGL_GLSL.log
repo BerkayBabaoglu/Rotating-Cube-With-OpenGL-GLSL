@@ -1,0 +1,5 @@
+﻿  Shader.cpp
+C:\Users\user\source\repos\RotatingCube_With_OpenGL_GLSL\RotatingCube_With_OpenGL_GLSL\Shader.cpp(27,33): warning C4101: 'e': unreferenced local variable
+C:\Users\user\source\repos\RotatingCube_With_OpenGL_GLSL\RotatingCube_With_OpenGL_GLSL\Shader.cpp(94,54): warning C4244: 'argument': conversion from 'float' to 'GLint', possible loss of data
+glew32sd.lib(glew.obj) : warning LNK4099: PDB '' was not found with 'glew32sd.lib(glew.obj)' or at ''; linking object as if no debug info
+  RotatingCube_With_OpenGL_GLSL.vcxproj -> C:\Users\user\source\repos\RotatingCube_With_OpenGL_GLSL\x64\Debug\RotatingCube_With_OpenGL_GLSL.exe
