@@ -73,10 +73,10 @@ int main() {
 
     glEnable(GL_DEPTH_TEST);
 
-    // Shader yükle
-    Shader shader("Shaders/cube.vert", "Shaders/cube.frag");
+    
+    Shader shader("Shaders/cube.vert", "Shaders/cube.frag"); //shader yukle
 
-    // VAO VBO ayarla
+    
     GLuint VBO, VAO;
     glGenVertexArrays(1, &VAO);
     glGenBuffers(1, &VBO);
@@ -94,7 +94,7 @@ int main() {
 
         shader.use();
 
-        // Matrisler
+        // matrisler
         glm::mat4 model = glm::mat4(1.0f);
         model = glm::rotate(model, (float)glfwGetTime(), glm::vec3(0.5f, 1.0f, 0.0f));
 
