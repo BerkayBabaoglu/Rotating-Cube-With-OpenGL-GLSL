@@ -58,7 +58,12 @@ int main() {
         return -1;
     }
 
-    GLFWwindow* window = glfwCreateWindow(800, 600, "Rotating Cube", NULL, NULL);
+    GLFWmonitor* monitor = glfwGetPrimaryMonitor();
+    const GLFWvidmode* mode = glfwGetVideoMode(monitor);
+    GLFWwindow* window = glfwCreateWindow(mode->width, mode->height, "Rotating Cube", monitor, NULL); //tam ekran
+
+    //GLFWwindow* window = glfwCreateWindow(1920, 1080, "Rotating Cube", NULL, NULL); //pencere
+    
     if (!window) {
         std::cerr << "Failed to create GLFW window\n";
         glfwTerminate();
