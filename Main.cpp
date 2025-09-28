@@ -101,7 +101,10 @@ int main() {
 
         // matrisler
         glm::mat4 model = glm::mat4(1.0f);
-        model = glm::rotate(model, (float)glfwGetTime(), glm::vec3(0.5f, 1.0f, 0.0f));
+        model = glm::rotate(model, (float)glfwGetTime(), glm::vec3(0.5f, 1.0f, 0.0f)); //rotate
+
+        float verticalMovement = sin((float)glfwGetTime()) * .2f;
+        model = glm::translate(model, glm::vec3(0.0f, verticalMovement, 0.0f));
 
         glm::mat4 view = glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, 0.0f, -3.0f));
         glm::mat4 projection = glm::perspective(glm::radians(45.0f), 800.0f / 600.0f, 0.1f, 100.0f);
@@ -111,6 +114,10 @@ int main() {
         shader.setMat4("projection", projection);
 
         glBindVertexArray(VAO);
+        glDrawArrays(GL_TRIANGLES, 0, 36);
+
+        glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+        glLineWidth(2.0f);
         glDrawArrays(GL_TRIANGLES, 0, 36);
 
         glfwSwapBuffers(window);
