@@ -1,3 +1,2 @@
 ﻿  Main.cpp
-glew32sd.lib(glew.obj) : warning LNK4099: PDB '' was not found with 'glew32sd.lib(glew.obj)' or at ''; linking object as if no debug info
   RotatingCube_With_OpenGL_GLSL.vcxproj -> C:\Users\user\source\repos\RotatingCube_With_OpenGL_GLSL\x64\Debug\RotatingCube_With_OpenGL_GLSL.exe
